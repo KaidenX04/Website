@@ -1,0 +1,31 @@
+<body style="background-color:#1c87c9;">
+</body>
+
+<script type="module">
+    import {Temperature_converter} from "./Modules/Temperature_converter.js";
+    import {Calculator} from "./Modules/Calculator.js";
+
+    const cont = 1
+
+    while (cont === 1) {
+        let chose_function = (Number(prompt("What would you like to do today?\r" +
+            "Press 1 to Convert temperatures\r" +
+            "Press 2 to Use Calculator")));
+
+        if (chose_function === 1) {
+            Temperature_converter()
+        } else if (chose_function === 2) {
+            Calculator()
+        } else {
+            alert("Invalid Input")
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
