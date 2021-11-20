@@ -1,0 +1,29 @@
+<head>
+    <title>Calculator</title>
+    <script type=text/javascript src="./calculator.js"></script>
+    <link rel = "stylesheet" href = "../../style.css">
+</head>
+
+<body id="calculatorInputBoxes">
+    <label style="display: inline-block; padding: 40px" id="first_number_input_label" for="firstNumberInput">Enter First Number<br/>
+        <input type="number" id ="firstNumberInput" onchange="celsiusConverter();">
+    </label>
+
+
+
+    <label style="display: inline-block; padding: 40px" id="operator_input_label" for="operatorNumberInput">Enter Operator<br/>
+        <input type="text" id ="operatorNumberInput" onchange="celsiusConverter();">
+    </label>
+
+
+
+    <label style="display: inline-block; padding: 40px" id="second_number_input_label" for="secondNumberInput">Enter Second Number<br/>
+        <input type="number" id ="secondNumberInput" onchange="celsiusConverter();">
+    </label>
+
+
+    <div id="calculatorBack">
+        <button style="display: inline-block;" id ="calculatorBackBtn" type="button" onclick="location.href='../../index.html'">Back</button>
+        <button style="display: inline-block;" id ="calculatorEnter" type="button" onclick="Calculator(); location.reload();">Enter</button>
+    </div>
+</body>
