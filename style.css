@@ -1,0 +1,102 @@
+                /* Main Screen */
+
+#tempConv {
+    color: black;
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}
+
+#calc   {
+    color: black;
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}
+
+#tempBut {
+    padding: 30px 30px;
+    text-align: center;
+
+}
+
+#introText {
+    font-family: fantasy, papyrus;
+    font-size: 150%;
+    text-align: center;
+}
+
+                /* Temp converter */
+
+#temperature_converter_main_screen_text {
+    font-family: fantasy, papyrus;
+    font-size: 150%;
+    text-align: center;
+}
+
+#celsius_to_fahrenheit {
+    color: black;
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}
+
+#fahrenheit_to_celsius {
+    color: black;
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}
+
+#temperature_converter_main_screen_buttons {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+#tempConBackButton {
+    color: black;
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}
+
+#TempConBack {
+    text-align: center;
+}
+
+                /* C to F*/
+
+#celsiusToFahrenheitInputBoxes_text {
+    font-family: fantasy, papyrus;
+    font-size: 150%;
+    text-align: center;
+}
+
+#celsiusToFahrenheitInputBoxes {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+#celsiusToFahrenheitBack {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+#celsiusToFahrenheitBackBtn {
+    color: black;
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    position: relative;
+    vertical-align:top;
+}

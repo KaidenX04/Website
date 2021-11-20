@@ -1,4 +1,4 @@
-export function Calculator() {
+function Calculator() {
     const cont = 1
 
     while (cont === 1) {

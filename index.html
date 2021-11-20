@@ -1,27 +1,32 @@
-<body style="background-color:#00008B;"></body>
+
+<head>
+    <title>Kaiden's Website</title>
+    <link rel = "stylesheet" href = "./style.css">
+</head>
+
+
+
 
 <body>
-    <script type="module">
-        import {Temperature_converter} from "./Modules/temperature_converter.js";
-        import {Calculator} from "./Modules/calculator.js";
 
-        const cont = 1
 
-        while (cont === 1) {
-            let chose_function = (Number(prompt("What would you like to do today?\r" +
-                "Press 1 to Convert temperatures\r" +
-                "Press 2 to Use Calculator")));
+    <p id="introText">What would you like to use?</p>
 
-            if (chose_function === 1) {
-                Temperature_converter()
-            } else if (chose_function === 2) {
-                Calculator()
-            } else {
-                alert("Invalid Input")
-            }
-        }
-    </script>
+    <div class="btn-group" id=tempBut>
+        <button onclick="location.href='./Pages/temperatureConverter/temperatureConverter.html'" type="button" id = "tempConv">Temperature Converter</button>
+        <button onclick="Calculator()" type="button" id = "calc">Calculator</button>
+    </div>
+
+
+
+
 </body>
+
+
+
+
+
+
 
 
 
