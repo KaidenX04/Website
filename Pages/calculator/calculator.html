@@ -1,29 +1,31 @@
+<!doctype html>
+<html>
 <head>
-    <title>Calculator</title>
-    <script type=text/javascript src="./calculator.js"></script>
-    <link rel = "stylesheet" href = "../../style.css">
+    <script type="text/javascript" src="calculator.js"></script>
+    <title>TemperatureConverter</title> 
+    <link rel="stylesheet" href="./calculator.css">    
+
 </head>
 
-<body id="calculatorInputBoxes">
-    <label style="display: inline-block; padding: 40px" id="first_number_input_label" for="firstNumberInput">Enter First Number<br/>
-        <input type="number" id ="firstNumberInput" onchange="celsiusConverter();">
-    </label>
+<body id = "celsiusToFahrenheit" class="main">    
 
-
-
-    <label style="display: inline-block; padding: 40px" id="operator_input_label" for="operatorNumberInput">Enter Operator<br/>
-        <input type="text" id ="operatorNumberInput" onchange="celsiusConverter();">
-    </label>
-
-
-
-    <label style="display: inline-block; padding: 40px" id="second_number_input_label" for="secondNumberInput">Enter Second Number<br/>
-        <input type="number" id ="secondNumberInput" onchange="celsiusConverter();">
-    </label>
-
-
-    <div id="calculatorBack">
-        <button style="display: inline-block;" id ="calculatorBackBtn" type="button" onclick="location.href='../../index.html'">Back</button>
-        <button style="display: inline-block;" id ="calculatorEnter" type="button" onclick="Calculator(); location.reload();">Enter</button>
+    <div class=titleContainer>
+        <p class="titleText">Enter Equation</p>
     </div>
+
+    <div class="inputContainer">
+        <input id = "firstNumber" type="number" class="input" placeholder="First">
+        <input id = "operator" type="text" class="input" placeholder="Operator">
+        <input id = "secondNumber" type="number" class="input" placeholder="Second">
+    </div>
+
+    <div class = "inputContainer">
+        <button class="btn" id="enter" onclick="Calculator();">Enter</button>
+    </div>
+
+    <div id = "back" class="btnContainer">
+        <button id="backBtn" class="btn" onclick="location.href='../../index.html'">back</button>
+    </div>
+
 </body>
+</html>

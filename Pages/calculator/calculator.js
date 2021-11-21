@@ -1,8 +1,8 @@
 function Calculator() {
 
-    let a = Number(document.getElementById("firstNumberInput").value);
-    let b = String(document.getElementById("operatorNumberInput").value);
-    let c = Number(document.getElementById("secondNumberInput").value);
+    let a = Number(document.getElementById("firstNumber").value);
+    let b = String(document.getElementById("operator").value);
+    let c = Number(document.getElementById("secondNumber").value);
 
     switch(b)
     {
@@ -32,6 +32,7 @@ function Calculator() {
             break
         }
     }
+    location = location
 }
 
 

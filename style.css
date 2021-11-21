@@ -1,192 +1,61 @@
-                /* Main Screen */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
-#tempConv {
-    color: black;
-    font-size: 200%;
-    width: 300px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
+
+.main {
+    background-color: white;
 }
 
-#calc   {
-    color: black;
-    font-size: 200%;
-    width: 300px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
+.main.hover {
+    background-color: red;
 }
 
-#tempBut {
-    padding: 30px 30px;
+
+.titleText {
+    position: relative;
+    z-index: 1000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
     text-align: center;
-
-}
-
-#introText {
-    font-family: fantasy, papyrus;
     font-size: 400%;
-    text-align: center;
+    color: rgb(0, 0, 0);
 }
 
-                /* Temp converter */
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+ }
 
-#temperature_converter_main_screen_text {
-    font-family: fantasy, papyrus;
-    font-size: 300%;
-    text-align: center;
-}
-
-#celsius_to_fahrenheit {
-    color: black;
+ .btn {
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
     font-size: 200%;
-    width: 300px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
+    width: 400px;
+    height: 150px;
+    color: white;
+    background-color: #431ab3;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: ease-out 0.5s;
+ }
 
-#fahrenheit_to_celsius {
+ .btn:hover {
+     z-index: 1;
+     box-shadow: 15px 15px 0 0 rgb(146, 146, 12), 30px 30px 0 0 rgb(9, 9, 80), 0 0 0 2000px #431ab3;
+     color: black;
+     background-color: yellow;
+     cursor: pointer;
+ }
+
+ .btn:active {
+     z-index: 90000;
+    transition: 0.0000001s;
     color: black;
-    font-size: 200%;
-    width: 300px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#temperature_converter_main_screen_buttons {
-    padding: 30px 30px;
-    text-align: center;
-}
-
-#tempConBackButton {
-    color: black;
-    font-size: 200%;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#TempConBack {
-    text-align: center;
-}
-
-                /* C to F*/
-
-#celsiusToFahrenheitInputBoxes_text {
-    font-family: fantasy, papyrus;
-    font-size: 400%;
-    text-align: center;
-}
-
-#celsiusToFahrenheitInputBoxes {
-    padding: 30px 30px;
-    text-align: center;
-}
-
-#celsiusToFahrenheitBack {
-    padding: 30px 30px;
-    text-align: center;
-}
-
-#celsiusToFahrenheitBackBtn {
-    color: black;
-    font-size: 200%;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#celsiusInput{
-    height: 50px;
-    width: 200px;
-}
-
-                /* F to C*/
-
-#fahrenheitToCelsiusInputBoxes_text {
-    font-family: fantasy, papyrus;
-    font-size: 400%;
-    text-align: center;
-}
-
-#fahrenheitToCelsiusInputBoxes {
-    padding: 30px 30px;
-    text-align: center;
-}
-
-#fahrenheitToCelsiusBack {
-    padding: 30px 30px;
-    text-align: center;
-}
-
-#fahrenheitToCelsiusBackBtn {
-    color: black;
-    font-size: 200%;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#fahrenheitInput{
-    height: 50px;
-    width: 200px;
-}
-
-                /*Calculator*/
-
-#calculatorInputBoxes {
-    text-align: center;
-    font-family: fantasy, papyrus;
-    font-size: 300%;
-}
-
-#calculatorBackBtn {
-    color: black;
-    font-size: 75%;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#calculatorEnter {
-    color: black;
-    font-size: 75%;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    position: relative;
-    vertical-align:top;
-}
-
-#firstNumberInput {
-    font-size: 50%;
-    height: 50px;
-    width: 200px;
-}
-
-#operatorNumberInput {
-    font-size: 50%;
-    height: 50px;
-    width: 200px;
-}
-
-#secondNumberInput {
-    font-size: 50%;
-    height: 50px;
-    width: 200px;
-}
+    background-color:rgb(146, 146, 12),;
+    box-shadow: 0 0 0 200px white,  0 0 0 2000px #431ab3;
+    cursor: pointer;     
+ }

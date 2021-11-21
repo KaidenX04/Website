@@ -1,19 +1,29 @@
+<!doctype html>
+<html>
 <head>
-    <title>Celsius to Fahrenheit</title>
-    <script type=text/javascript src="./temperature_converter.js"></script>
-    <link rel = "stylesheet" href = "../../style.css">
+    <script type="text/javascript" src="temperature_converter.js"></script>
+    <title>TemperatureConverter</title> 
+    <link rel="stylesheet" href="./temperatureConverter.css">    
+
 </head>
 
-<body>
-    <div id="celsiusToFahrenheitInputBoxes">
-        <label id="celsiusToFahrenheitInputBoxes_text" for="celsiusInput">Enter Temperature in Celsius</label> <br />
-        <input type="number" id ="celsiusInput" onchange="celsiusConverter();">
+<body id = "celsiusToFahrenheit" class="main">    
 
-
+    <div class=titleContainer>
+        <p class="titleText">Enter Temperature in Celsius</p>
     </div>
-    <div id="celsiusToFahrenheitBack">
-        <button id ="celsiusToFahrenheitBackBtn" type="button" onclick="location.href='temperatureConverter.html'">Back</button>
+
+    <div class="inputContainer">
+        <input id = "celsiusInput" type="text" class="input">
+    </div>
+
+    <div class = "inputContainer">
+        <button class="btn" id="enter" onclick="celsiusConverter();">Enter</button>
+    </div>
+
+    <div id = "back" class="btnContainer">
+        <button id="backBtn" class="btn" onclick="location.href='./temperatureConverter.html'">back</button>
     </div>
 
 </body>
-
+</html>

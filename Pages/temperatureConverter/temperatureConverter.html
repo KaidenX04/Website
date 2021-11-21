@@ -1,12 +1,22 @@
-<link rel = "stylesheet" href = "../../style.css">
+<!doctype html>
+<html>
+<head>
+    <title>TemperatureConverter</title> 
+    <link rel="stylesheet" href="./temperatureConverter.css">    
+</head>
 
-<body>
-    <p id="temperature_converter_main_screen_text">Choose your conversion</p>
-    <div id="temperature_converter_main_screen_buttons">
-        <button onclick="location.href='celsius_to_fahrenheit.html'" type="button" id="celsius_to_fahrenheit">Celsius to Fahrenheit</button>
-        <button onclick="location.href='fahrenheit_to_celsius.html'" type="button" id="fahrenheit_to_celsius">Fahrenheit to Celsius</button>
+<body id = "temperatureConverter" class="main">    
+
+    <div class="titleContainer">
+        <p class="titleText">Choose Conversion</p>
     </div>
-    <div id = TempConBack>
-        <button onclick="location.href='../../index.html'" type="button" id="tempConBackButton">Back</button>
+    <div class="btnContainer">
+        <button id="btn1" class="btn" onclick="location.href='./celsius_to_fahrenheit.html'">Celsius to Fahrenheit</button>
+        <button id="btn2" class="btn" onclick="location.href='./fahrenheit_to_celsius.html'">Fahrenheit to Celsius</button>
     </div>
+    <div id = "back" class="btnContainer">
+        <button id="backBtn" class="btn" onclick="location.href='../../index.html'">back</button>
+    </div>
+
 </body>
+</html>
