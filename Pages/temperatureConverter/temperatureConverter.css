@@ -2,20 +2,24 @@
 
 
 .main {
+    overflow: hidden;
     background-color: white;
 }
 
 .main.hover {
+    overflow: hidden;
     background-color: red;
 }
 
 
 .titleContainer{
+    overflow: hidden;
     text-align: center;
     position: relative;
 }
 
 .titleText {
+    overflow: hidden;
     position: relative;
     z-index: 1000;
     font-family: 'Roboto Mono', monospace;
@@ -32,6 +36,7 @@
     justify-content: center;
     align-items: center;
     height: 35vh;
+    margin-bottom: 30vh;
  }
 
  .btn {
@@ -66,6 +71,9 @@
  }
 
  #backBtn{
+     position: absolute;
+    overflow: hidden;
+    margin-right: -30vh;
     width: 200px;
     height: 65px;    
  }
@@ -82,12 +90,16 @@
 
 
  #back {
+
+
+    margin-bottom: -10vh;
      position: absolute;
      
-    height: 700px;
+    max-height: 10px;
  }
 
  .inputContainer {
+    height: 20vh;
     margin-top: 60px;
     font-family: 'Roboto Mono', monospace;     
     font-weight: bold;
@@ -95,6 +107,7 @@
     align-items: center;
     justify-content: center;
     color: rgb(0, 0, 0);
+    margin-bottom: 10vh;
  }
 
  .input{
@@ -113,7 +126,7 @@
  }
 
  #enter{
-     margin: 0%;
+     margin-top: -100%;
      width: 100px;
      height: 75px;
  }
