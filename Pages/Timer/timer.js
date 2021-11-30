@@ -25,7 +25,8 @@ start.addEventListener("click", () => {
                     minutes = minutes + 1
                 }
                     if (minutes === 60){
-                        console.log("Maximum of 1 hour reached")
+                        clearInterval(counterHandle)
+                        output.innerHTML = ("Maximum of 1 hour reached")
                     }
                 
 
