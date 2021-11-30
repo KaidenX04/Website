@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+
+.main {
+    background-color: white;
+}
+
+.main.hover {
+    background-color: red;
+}
+
+
+.titleContainer{
+    text-align: center;
+    position: relative;
+}
+
+.titleText {
+    position: relative;
+    z-index: 1000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 400%;
+    color: rgb(0, 0, 0);
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+ }
+
+ .btn {
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
+    font-size: 200%;
+    width: 400px;
+    height: 150px;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: ease-out 0.5s;
+ }
+
+ .btn:hover {
+     z-index: 1;
+     box-shadow: 15px 15px 0 0 rgb(34, 151, 139), 30px 30px 0 0 rgb(1, 94, 94),0 0 0 2000px red;
+     color: black;
+     background-color: turquoise;
+     cursor: pointer;
+ }
+
+ .btn:active {
+     z-index: 90000;
+    transition: 0.0000001s;
+    color: black;
+    background-color:rgb(146, 146, 12),;
+    box-shadow: 0 0 0 200px white,  0 0 0 2000px #431ab3;
+    cursor: pointer;     
+ }
+
+ #back{
+    width: 200px;
+    height: 65px;    
+ }
+
+#back:hover{
+    z-index: 90000000000;
+    box-shadow: 0 0 0 50px teal,0 0 0 200px white,  0 0 0 2000px teal;
+}
+
+#back:active {
+    box-shadow: 0 0 0 200px red,  0 0 0 2000px teal;
+
+}
+
+
+ #back {
+     position: absolute;
+ }
+
+ .inputContainer {
+    margin-top: 60px;
+    font-family: 'Roboto Mono', monospace;     
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+ }
+
+ .input{
+     z-index: 10002;
+     border-radius: 50px;
+     position: relative;
+     outline: turquoise;
+     background-color: red;
+     border: turquoise;
+     margin-bottom: 100px;
+     text-align: center;
+     font-family: 'Roboto Mono', monospace;    
+     font-size: 75px;
+     height: 100px;
+     width: 400px;
+ }
+
+ #enter{
+     margin: 0%;
+     width: 100px;
+     height: 75px;
+ }
+
+ #enter:hover{
+     position: relative;
+     z-index: 10001;
+    box-shadow: 0 0 0 20px rgb(34, 151, 139), 0 0 0 150px white,0 0 0 2000px red; 
+ }
+
+#enter:active{
+    transition: none;
+    position: relative;
+    z-index: 100000000000000;
+    box-shadow: 0 0 0 20px rgb(34, 151, 139), 0 0 0 10000px white,0 0 0 2000px red; 
+}
+
+#instructions{
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+    margin-left: 100em;
+}
