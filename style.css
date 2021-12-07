@@ -1,0 +1,132 @@
+#page{
+    overflow: hidden;
+}
+
+
+#camera{
+    width: 1000px;
+    height: 200px;
+    border-style: solid 1px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+    left: 50px;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 980px;
+    animation-duration: 2s;
+}
+
+@keyframes moveForeward{
+    0%{left:980px;}
+    100%{left:0px;}
+}
+
+@keyframes jump{
+    0%{top:150px;}
+    50%{top: 80px;}
+    100%{top:150px;}
+
+}
+
+.jump{
+    animation: jump 500ms;
+}
+
+.moving{
+    animation: moveForeward linear infinite;
+}
+
+#text{
+    text-align: center;
+    margin-top: 100;
+    margin-bottom: -100;
+    font-size: large;
+    font-weight: bolder;
+    color: blue;
+}
+
+.colorChange{
+    color: red;
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 0;} 
+}
+
+.midGame{
+    background-color: yellow;
+}
+
+.startGame{
+    background-color: turquoise;
+}
+
+@keyframes endGame1{
+    0%   {background-color: orange;}
+    50%  {background-color: yellow;}
+    100% {background-color: orange;}
+    
+    
+}
+
+.endGame1{
+    animation: endGame1 50ms linear infinite;
+}
+
+@keyframes endGame2 {
+    0%   {background-color: rgb(255, 94, 0);}
+    50%  {background-color: white;}
+    100% {background-color: rgb(255, 94, 0);}
+}
+
+.endGame2{
+    animation: endGame2 1s linear infinite;
+}
+
+.backEndGame2{
+    background-color: red;
+}
+
+@keyframes endGame3 {
+    0%   {background-color: red;}
+    50%  {background-color: white;}
+    100% {background-color: black;}
+}
+
+.endGame3{
+    animation: endGame3 0.8s linear infinite;
+}
+
+.backEndGame3{
+    background-color: black;
+}
+
+@keyframes backEndGame4{
+    0%   {background-color: black}
+    50%  {background-color: white;}
+    100% {background-color: black;}
+}
+
+.backEndGame4{
+    animation: backEndGame4 0.8s linear infinite;
+}
