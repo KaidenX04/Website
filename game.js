@@ -24,7 +24,7 @@ window.addEventListener("keydown",(e)=>{
 })
 
 block.addEventListener("animationiteration", ()=>{
-    points = points + 1
+    points = points + 5
     outputPoints.innerHTML = ("Points: "+ points)
     if (points % 10 == 0){
         levelOut.classList.add("colorChange")
