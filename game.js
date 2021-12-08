@@ -33,7 +33,31 @@ window.addEventListener("keyup",()=>{
     on = 1
 })
 
+window.addEventListener("touchstart",()=>{
+    gameOver.classList.add("hidden")
+    startScreen.classList.add("hidden")
+    block.classList.add("moving")
+    outputPoints.innerHTML = ("Points: "+ points)
+    highScore.innerHTML = ("High Score: "+ highScore)
+    levelOut.innerHTML = ("Level: "+ level)
+    block.classList.remove("hidden")
+    character.classList.remove("hidden")
+    background.classList.remove("hidden")
+    on = 1
+})
+
 window.addEventListener("keydown",(e)=>{
+    if (on === 1){
+        if (! character.classList.contains("jump") ){
+            character.classList.add("jump")
+        }
+        setTimeout(()=>{
+            character.classList.remove("jump")
+        },300)   
+    }   
+})
+
+window.addEventListener("touchstart",(e)=>{
     if (on === 1){
         if (! character.classList.contains("jump") ){
             character.classList.add("jump")
