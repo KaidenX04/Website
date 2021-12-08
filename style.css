@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+#startGame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: none;
+    margin-top: none;
+}
+
+.hidden{
+    z-index: 10000000;
+    display: none;
+}
+.gameOver{
+    animation: blink 1s linear infinite;
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 90;
+    top: 30%;
+    animation: blink 1s linear infinite;
+}
+
 #page{
     overflow: hidden;
+    display: grid;
+}
+
+#HighScore{
+    padding-top: 20em;
 }
 
 
@@ -12,6 +44,8 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    margin-bottom: none;
+    padding-bottom: none;
 }
 
 #character{
@@ -46,14 +80,15 @@
 }
 
 .jump{
-    animation: jump 500ms;
+    animation: jump 300ms;
 }
 
 .moving{
     animation: moveForeward linear infinite;
 }
 
-#text{
+.text{
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
     margin-top: 100;
     margin-bottom: -100;
@@ -69,8 +104,9 @@
 
 @keyframes blink{
     0%{opacity: 1;}
-    50%{opacity: 0;}
-    100%{opacity: 0;} 
+    50%{opacity: 1;}
+    90%{opacity: 0;} 
+    100%{opacity: 1;}
 }
 
 .midGame{
@@ -129,4 +165,12 @@
 
 .backEndGame4{
     animation: backEndGame4 0.8s linear infinite;
+}
+
+.endGame5{
+    animation: endGame3 0.5s linear infinite
+}
+
+.backEndGame5{
+    animation: backEndGame4 0.4s linear infinite;
 }
