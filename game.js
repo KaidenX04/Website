@@ -24,6 +24,31 @@ startScreen.classList.add("gameOver")
 gameOver.classList.add("hidden")
 background.classList.add("startGame")
 
+window.addEventListener("touchstart", ()=>{
+    if (on === 1){
+        if (! character.classList.contains("jump") ){
+            character.classList.add("jump")
+            jumpSound.play()
+        }
+        setTimeout(()=>{
+            character.classList.remove("jump")
+        },400)   
+    }  
+    gameOver.classList.add("hidden")
+    startScreen.classList.add("hidden")
+    block.classList.add("moving")
+    outputPoints.innerHTML = ("Points: "+ points)
+    highScore.innerHTML = ("High Score: "+ highScore)
+    levelOut.innerHTML = ("Level: "+ level)
+    block.classList.remove("hidden")
+    character.classList.remove("hidden")
+    background.classList.remove("hidden")
+    on = 1
+    if (ambient1.play() != true){
+        ambient1.play() 
+    }
+})
+
 window.addEventListener("keyup",()=>{
     gameOver.classList.add("hidden")
     startScreen.classList.add("hidden")
@@ -158,6 +183,4 @@ function hitDetect(timestamp){
     window.requestAnimationFrame(hitDetect)
 }
 window.requestAnimationFrame(hitDetect)
-
-
 
