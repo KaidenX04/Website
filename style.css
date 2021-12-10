@@ -36,6 +36,7 @@
 
 
 #camera{
+    overflow: hidden;
     width: 1000px;
     height: 200px;
     border-style: solid 1px black;
@@ -49,9 +50,12 @@
 }
 
 #character{
-    width: 20px;
+    width: 50px;
     height: 50px;
-    background-color: red;
+    /* background-color: red; */
+    background-image: url("./marx.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
     position: relative;
     top: 150px;
     left: 50px;
@@ -60,7 +64,10 @@
 #block{
     width: 20px;
     height: 20px;
-    background-color: blue;
+    /* background-color: blue; */
+    background-image: url("./Bullet.png");
+    background-repeat:no-repeat;
+    background-size:contain;
     position: relative;
     top: 130px;
     left: 980px;
@@ -69,18 +76,19 @@
 
 @keyframes moveForeward{
     0%{left:980px;}
-    100%{left:0px;}
+    100%{left:-20px;}
 }
 
 @keyframes jump{
     0%{top:150px;}
-    50%{top: 80px;}
+    30%{top: 70px;}
+    70%{top: 70px;}
     100%{top:150px;}
 
 }
 
 .jump{
-    animation: jump 300ms;
+    animation: jump 400ms linear;
 }
 
 .moving{

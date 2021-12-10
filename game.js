@@ -15,6 +15,10 @@ let startScreen = document.getElementById("startGame")
 let highScoreStart = document.getElementById("highScoreStart")
 let gameOver = document.getElementById("gameOver")
 let on = 0
+let jumpSound = new Audio("./jump.wav")
+let gameOverSound = new Audio("./Wasted.mp3")
+let ambient1 = new Audio("./Music1.mp3")
+let levelUp = new Audio("./levelUp.wav")
 
 startScreen.classList.add("gameOver")
 gameOver.classList.add("hidden")
@@ -31,40 +35,21 @@ window.addEventListener("keyup",()=>{
     character.classList.remove("hidden")
     background.classList.remove("hidden")
     on = 1
-})
-
-window.addEventListener("touchstart",()=>{
-    gameOver.classList.add("hidden")
-    startScreen.classList.add("hidden")
-    block.classList.add("moving")
-    outputPoints.innerHTML = ("Points: "+ points)
-    highScore.innerHTML = ("High Score: "+ highScore)
-    levelOut.innerHTML = ("Level: "+ level)
-    block.classList.remove("hidden")
-    character.classList.remove("hidden")
-    background.classList.remove("hidden")
-    on = 1
+    if (ambient1.play() != true){
+        ambient1.play() 
+    }
+    
 })
 
 window.addEventListener("keydown",(e)=>{
     if (on === 1){
         if (! character.classList.contains("jump") ){
             character.classList.add("jump")
+            jumpSound.play()
         }
         setTimeout(()=>{
             character.classList.remove("jump")
-        },300)   
-    }   
-})
-
-window.addEventListener("touchstart",(e)=>{
-    if (on === 1){
-        if (! character.classList.contains("jump") ){
-            character.classList.add("jump")
-        }
-        setTimeout(()=>{
-            character.classList.remove("jump")
-        },300)   
+        },400)   
     }   
 })
 
@@ -80,6 +65,7 @@ block.addEventListener("animationiteration", ()=>{
                 levelOut.classList.remove("colorChange")
             }, 1500)
             level = level + 1
+            levelUp.play()
             if (points < 20){
                 animationDuration = animationDuration - 0.5
                 block.style.animationDuration = (animationDuration+"s")
@@ -99,7 +85,6 @@ block.addEventListener("animationiteration", ()=>{
         if (points === 40){
             background.classList.remove("midGame")
             background.classList.add("endGame1")
-            character.style.animationDuration = ("0.6s")
         }
         if (points === 50){
             background.classList.remove("endGame1")
@@ -124,6 +109,7 @@ block.addEventListener("animationiteration", ()=>{
         }
     }
     if (hit === 1){
+        gameOverSound.play()
         block.classList.add("hidden")
         character.classList.add("hidden")
         level = 1
